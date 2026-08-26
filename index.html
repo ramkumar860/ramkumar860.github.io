@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trade The Trend - Telegram Channel</title>
+    <title>Learn Trading - Telegram Channel</title>
     <style>
         * {
             margin: 0;
@@ -13,7 +13,7 @@
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            background: linear-gradient(135deg, #0a1628 0%, #1a2a3a 100%);
             min-height: 100vh;
             display: flex;
             justify-content: center;
@@ -24,11 +24,12 @@
         .container {
             width: 100%;
             max-width: 500px;
-            background: white;
+            background: linear-gradient(135deg, #0f1e2e 0%, #1a2a3a 100%);
             border-radius: 30px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
             padding: 40px 25px;
             text-align: center;
+            border: 1px solid rgba(102, 178, 255, 0.2);
         }
 
         .logo-container {
@@ -36,116 +37,41 @@
         }
 
         .logo {
-            width: 140px;
-            height: 140px;
-            background: radial-gradient(circle, #f0f0f0 0%, #e0e0e0 100%);
-            border-radius: 50%;
+            width: 160px;
+            height: 160px;
             display: flex;
             justify-content: center;
             align-items: center;
             margin: 0 auto 20px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2), inset 0 -2px 5px rgba(0, 0, 0, 0.1);
-            position: relative;
         }
 
-        .logo::before {
-            content: '';
-            position: absolute;
-            width: 130px;
-            height: 130px;
-            background: #2c3e50;
-            border-radius: 50%;
-            z-index: 0;
-        }
-
-        .logo-content {
-            position: relative;
-            z-index: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            color: white;
-        }
-
-        .chart-bars {
-            display: flex;
-            gap: 3px;
-            margin-bottom: 5px;
-            height: 25px;
-            align-items: flex-end;
-        }
-
-        .bar {
-            width: 6px;
-            background: linear-gradient(to top, #27ae60, #2ecc71);
-            border-radius: 2px;
-        }
-
-        .bar:nth-child(1) { height: 60%; }
-        .bar:nth-child(2) { height: 75%; }
-        .bar:nth-child(3) { height: 90%; }
-
-        .arrow {
-            color: #2ecc71;
-            font-size: 16px;
-            margin-left: 3px;
-        }
-
-        .logo-text {
-            font-size: 18px;
-            font-weight: bold;
-            letter-spacing: 2px;
-            color: #999;
+        .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
         }
 
         .channel-title {
-            font-size: 28px;
+            font-size: 32px;
             font-weight: 700;
-            color: #1e88e5;
-            margin-bottom: 10px;
+            color: #ffffff;
+            margin-bottom: 15px;
             letter-spacing: 1px;
-        }
-
-        .channel-sparkle {
-            display: inline-block;
-            font-size: 24px;
-            margin: 0 8px;
         }
 
         .channel-description {
             font-size: 18px;
-            font-weight: 600;
-            color: #2c3e50;
-            margin-bottom: 25px;
+            font-weight: 500;
+            color: #66b2ff;
+            margin-bottom: 30px;
             line-height: 1.4;
-        }
-
-        .subscribers-section {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 10px;
-            margin-bottom: 20px;
-            color: #666;
-        }
-
-        .subscribers-icon {
-            font-size: 20px;
-            color: #1e88e5;
-        }
-
-        .subscribers-count {
-            font-size: 18px;
-            font-weight: 600;
-            color: #2c3e50;
         }
 
         .telegram-description {
             font-size: 15px;
-            color: #555;
-            margin-bottom: 30px;
-            font-weight: 500;
+            color: #aaa;
+            margin-bottom: 35px;
+            font-weight: 400;
         }
 
         .button-group {
@@ -182,38 +108,19 @@
             box-shadow: 0 12px 30px rgba(0, 136, 204, 0.4);
         }
 
-        .btn-ads {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        .btn-community {
+            background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
             color: white;
-            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+            box-shadow: 0 8px 20px rgba(0, 212, 255, 0.3);
         }
 
-        .btn-ads:hover {
+        .btn-community:hover {
             transform: translateY(-2px);
-            box-shadow: 0 12px 30px rgba(102, 126, 234, 0.4);
+            box-shadow: 0 12px 30px rgba(0, 212, 255, 0.4);
         }
 
         .btn-icon {
             font-size: 18px;
-        }
-
-        .disclaimer {
-            background: #f5f5f5;
-            border-radius: 12px;
-            padding: 15px;
-            font-size: 12px;
-            color: #888;
-            line-height: 1.6;
-            margin-top: 20px;
-        }
-
-        .disclaimer-label {
-            font-weight: 600;
-            color: #666;
-        }
-
-        .disclaimer-text {
-            margin-top: 5px;
         }
 
         @media (max-width: 480px) {
@@ -223,7 +130,7 @@
             }
 
             .channel-title {
-                font-size: 24px;
+                font-size: 28px;
             }
 
             .channel-description {
@@ -237,9 +144,9 @@
         }
 
         .footer-credit {
-            margin-top: 20px;
+            margin-top: 25px;
             font-size: 11px;
-            color: #aaa;
+            color: #666;
         }
     </style>
 </head>
@@ -248,42 +155,55 @@
         <!-- Logo -->
         <div class="logo-container">
             <div class="logo">
-                <div class="logo-content">
-                    <div style="display: flex; align-items: center;">
-                        <div class="chart-bars">
-                            <div class="bar"></div>
-                            <div class="bar"></div>
-                            <div class="bar"></div>
-                        </div>
-                        <div class="arrow">↗</div>
-                    </div>
-                    <div class="logo-text">TRADE</div>
-                    <div class="logo-text" style="letter-spacing: 0px; font-size: 14px; color: #aaa;">THE TREND</div>
-                </div>
+                <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Candlestick Chart -->
+                    <!-- Candle 1 -->
+                    <rect x="50" y="140" width="25" height="80" fill="#ffffff"/>
+                    <rect x="57.5" y="100" width="10" height="40" fill="#ffffff"/>
+                    <rect x="57.5" y="220" width="10" height="40" fill="#ffffff"/>
+                    
+                    <!-- Candle 2 -->
+                    <rect x="95" y="100" width="25" height="120" fill="#00a8ff"/>
+                    <rect x="102.5" y="80" width="10" height="20" fill="#00a8ff"/>
+                    <rect x="102.5" y="220" width="10" height="30" fill="#00a8ff"/>
+                    
+                    <!-- Candle 3 -->
+                    <rect x="140" y="80" width="25" height="160" fill="#ffffff"/>
+                    <rect x="147.5" y="60" width="10" height="20" fill="#ffffff"/>
+                    <rect x="147.5" y="240" width="10" height="20" fill="#ffffff"/>
+                    
+                    <!-- Candle 4 -->
+                    <rect x="185" y="60" width="25" height="180" fill="#00a8ff"/>
+                    <rect x="192.5" y="40" width="10" height="20" fill="#00a8ff"/>
+                    <rect x="192.5" y="240" width="10" height="20" fill="#00a8ff"/>
+                    
+                    <!-- Uptrend Line -->
+                    <line x1="75" y1="200" x2="210" y2="80" stroke="#00d4ff" stroke-width="4" stroke-linecap="round"/>
+                    
+                    <!-- Arrow -->
+                    <polygon points="210,80 220,70 215,85" fill="#00d4ff"/>
+                    
+                    <!-- Home icon -->
+                    <g transform="translate(280, 150)">
+                        <polygon points="0,-20 -20,10 -15,10 -15,30 15,30 15,10 20,10" fill="#00a8ff"/>
+                        <line x1="-5" y1="10" x2="-5" y2="30" stroke="#0a1628" stroke-width="2"/>
+                        <line x1="5" y1="10" x2="5" y2="30" stroke="#0a1628" stroke-width="2"/>
+                    </g>
+                </svg>
             </div>
         </div>
 
         <!-- Channel Title -->
-        <h1>
-            <span class="channel-sparkle">✨</span>
-            <span class="channel-title">TRADE THE TREND</span>
-            <span class="channel-sparkle">✨</span>
-        </h1>
+        <h1 class="channel-title">LEARN TRADING</h1>
 
         <!-- Description -->
         <p class="channel-description">
-            India's Best Channel For Option Trading And Nifty, Banknifty
+            Smart Trading Education
         </p>
-
-        <!-- Subscribers -->
-        <div class="subscribers-section">
-            <span class="subscribers-icon">👥</span>
-            <span class="subscribers-count">57,090 subscribers</span>
-        </div>
 
         <!-- Telegram Description -->
         <p class="telegram-description">
-            India's Best Telegram Channel For Option Trading
+            Join our community for professional trading education and insights
         </p>
 
         <!-- Buttons -->
@@ -292,23 +212,15 @@
                 <span class="btn-icon">✓</span>
                 Join on Telegram
             </a>
-            <a href="https://t.me/+OgGdgIxBgydiZjc1" target="_blank" class="btn btn-ads">
-                <span class="btn-icon">📢</span>
-                Manage Ads
+            <a href="https://t.me/+OgGdgIxBgydiZjc1" target="_blank" class="btn btn-community">
+                <span class="btn-icon">👥</span>
+                Join Community
             </a>
-        </div>
-
-        <!-- Disclaimer -->
-        <div class="disclaimer">
-            <div class="disclaimer-label">Disclaimer:</div>
-            <div class="disclaimer-text">
-                All content is for educational purposes only. ✨ TRADE THE TREND ✨ is not responsible for any financial decisions. Trading involves risk—please do your own research.
-            </div>
         </div>
 
         <!-- Footer -->
         <div class="footer-credit">
-            Powered by Professional Trading Channel
+            Professional Trading Education Channel
         </div>
     </div>
 
