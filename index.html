@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trade The Trend - Telegram Channel</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 500px;
+            background: white;
+            border-radius: 30px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+            padding: 40px 25px;
+            text-align: center;
+        }
+
+        .logo-container {
+            margin-bottom: 30px;
+        }
+
+        .logo {
+            width: 140px;
+            height: 140px;
+            background: radial-gradient(circle, #f0f0f0 0%, #e0e0e0 100%);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2), inset 0 -2px 5px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        .logo::before {
+            content: '';
+            position: absolute;
+            width: 130px;
+            height: 130px;
+            background: #2c3e50;
+            border-radius: 50%;
+            z-index: 0;
+        }
+
+        .logo-content {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        .chart-bars {
+            display: flex;
+            gap: 3px;
+            margin-bottom: 5px;
+            height: 25px;
+            align-items: flex-end;
+        }
+
+        .bar {
+            width: 6px;
+            background: linear-gradient(to top, #27ae60, #2ecc71);
+            border-radius: 2px;
+        }
+
+        .bar:nth-child(1) { height: 60%; }
+        .bar:nth-child(2) { height: 75%; }
+        .bar:nth-child(3) { height: 90%; }
+
+        .arrow {
+            color: #2ecc71;
+            font-size: 16px;
+            margin-left: 3px;
+        }
+
+        .logo-text {
+            font-size: 18px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            color: #999;
+        }
+
+        .channel-title {
+            font-size: 28px;
+            font-weight: 700;
+            color: #1e88e5;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        .channel-sparkle {
+            display: inline-block;
+            font-size: 24px;
+            margin: 0 8px;
+        }
+
+        .channel-description {
+            font-size: 18px;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 25px;
+            line-height: 1.4;
+        }
+
+        .subscribers-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+            color: #666;
+        }
+
+        .subscribers-icon {
+            font-size: 20px;
+            color: #1e88e5;
+        }
+
+        .subscribers-count {
+            font-size: 18px;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .telegram-description {
+            font-size: 15px;
+            color: #555;
+            margin-bottom: 30px;
+            font-weight: 500;
+        }
+
+        .button-group {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 25px;
+        }
+
+        .btn {
+            padding: 14px 30px;
+            border: none;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            width: 100%;
+        }
+
+        .btn-telegram {
+            background: linear-gradient(135deg, #0088cc 0%, #0077b6 100%);
+            color: white;
+            box-shadow: 0 8px 20px rgba(0, 136, 204, 0.3);
+        }
+
+        .btn-telegram:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 30px rgba(0, 136, 204, 0.4);
+        }
+
+        .btn-ads {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+        }
+
+        .btn-ads:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 30px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-icon {
+            font-size: 18px;
+        }
+
+        .disclaimer {
+            background: #f5f5f5;
+            border-radius: 12px;
+            padding: 15px;
+            font-size: 12px;
+            color: #888;
+            line-height: 1.6;
+            margin-top: 20px;
+        }
+
+        .disclaimer-label {
+            font-weight: 600;
+            color: #666;
+        }
+
+        .disclaimer-text {
+            margin-top: 5px;
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 30px 20px;
+                border-radius: 25px;
+            }
+
+            .channel-title {
+                font-size: 24px;
+            }
+
+            .channel-description {
+                font-size: 16px;
+            }
+
+            .btn {
+                padding: 12px 25px;
+                font-size: 15px;
+            }
+        }
+
+        .footer-credit {
+            margin-top: 20px;
+            font-size: 11px;
+            color: #aaa;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Logo -->
+        <div class="logo-container">
+            <div class="logo">
+                <div class="logo-content">
+                    <div style="display: flex; align-items: center;">
+                        <div class="chart-bars">
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                        </div>
+                        <div class="arrow">↗</div>
+                    </div>
+                    <div class="logo-text">TRADE</div>
+                    <div class="logo-text" style="letter-spacing: 0px; font-size: 14px; color: #aaa;">THE TREND</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Channel Title -->
+        <h1>
+            <span class="channel-sparkle">✨</span>
+            <span class="channel-title">TRADE THE TREND</span>
+            <span class="channel-sparkle">✨</span>
+        </h1>
+
+        <!-- Description -->
+        <p class="channel-description">
+            India's Best Channel For Option Trading And Nifty, Banknifty
+        </p>
+
+        <!-- Subscribers -->
+        <div class="subscribers-section">
+            <span class="subscribers-icon">👥</span>
+            <span class="subscribers-count">57,090 subscribers</span>
+        </div>
+
+        <!-- Telegram Description -->
+        <p class="telegram-description">
+            India's Best Telegram Channel For Option Trading
+        </p>
+
+        <!-- Buttons -->
+        <div class="button-group">
+            <a href="https://t.me/+mYWvvqWPZ5ljZjJl" target="_blank" class="btn btn-telegram">
+                <span class="btn-icon">✓</span>
+                Join on Telegram
+            </a>
+            <a href="https://t.me/+OgGdgIxBgydiZjc1" target="_blank" class="btn btn-ads">
+                <span class="btn-icon">📢</span>
+                Manage Ads
+            </a>
+        </div>
+
+        <!-- Disclaimer -->
+        <div class="disclaimer">
+            <div class="disclaimer-label">Disclaimer:</div>
+            <div class="disclaimer-text">
+                All content is for educational purposes only. ✨ TRADE THE TREND ✨ is not responsible for any financial decisions. Trading involves risk—please do your own research.
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer-credit">
+            Powered by Professional Trading Channel
+        </div>
+    </div>
+
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1611952840294114');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1611952840294114&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+</body>
+</html>
