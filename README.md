@@ -1,2 +1,2 @@
-# ramkumar860.github.io
-Trade The Trend - Telegram Channel Landing Page
+# Learncommunity.github.io
+Learn Community
